@@ -1,0 +1,9 @@
+export const fetchTodos = () => {
+    const todos = localStorage.getItem("todoList");
+    return todos ? JSON.parse(todos) : [];
+  };
+  
+  export const saveTodos = (todos) => {
+    localStorage.setItem("todoList", JSON.stringify(todos));
+  };
+  
